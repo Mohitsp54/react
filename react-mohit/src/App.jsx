@@ -14,13 +14,13 @@ import './App.css'
 // or
 export const App = ()=>{
   return (
-  <Fragment>
+  <React.Fragment>
   <NetflixSeries />
   <NetflixSeries />
   <NetflixSeries />
   <NetflixSeries />
   <NetflixSeries />
-  </Fragment>)
+  </React.Fragment>)
 };
 
 const NetflixSeries = () =>{
