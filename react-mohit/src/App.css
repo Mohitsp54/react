@@ -1,4 +1,13 @@
 #root {
   margin: 0;
   padding: 0;
+  background-color: black;
+  color: aliceblue;
+}
+h2{
+  color: red;
+}
+button{
+  background-color: red;
+  color:aliceblue;
 }
