@@ -1,40 +1,28 @@
+import seriesData from "../api/seriesData.json";
 const NetflixSeries = () =>{
-    const name = "Queen of Tears";
-    const rating = 8.5;
-    const summary = "Nice Movie";
-    const returnGenre = () =>{
-      const genre = "Romcom";
-      return genre;
-    };
-    let age =19;
-    // if(age < 18){
-    //   return (
-    //     <div>
-    //     <div>
-    //       <img src="netflix.jpg" alt ="heroSection.svg" 
-    //       width="40%" height="40%"/>
-    //     </div>
-    //     <h2>Name: {name}</h2>
-    //     <h3>Rating:{rating}</h3>
-    //     <p>summary:{summary}</p>
-    //     <p>Genre:{returnGenre()}</p>
-    //     <button>Not Available</button>
-    //   </div> 
-    //   )
-    // }
   
     return (
-      <div>
-        <div>
-          <img src="netflix.jpg" alt ="heroSection.svg" 
-          width="40%" height="40%"/>
-        </div>
-        <h2>Name: {name}</h2>
-        <h3>Rating:{rating}</h3>
-        <p>summary:{summary}</p>
-        <p>Genre:{returnGenre()}</p>
-        <button>{age >= 18?"Watch Now":"Not Available"}</button>
-      </div>);
+     <ul>
+        {
+            seriesData.map((curElem)=>{
+          return(
+          <li key = {curElem.id}>
+            <div>
+            <img src={curElem.img_url} alt ={curElem.name}
+            width="40%" height="40%"/>
+            </div>
+            <h2>Name: {curElem.name}</h2>
+            <h3>Rating:{curElem.rating}</h3>
+            <p>summary:{curElem.description}</p>
+            <p>Genre:curElem.genre</p>
+            <p>Cast:{curElem.cast}</p>
+            <a href={curElem.watch_url} target="_blank">
+            <button>Watch Now</button>
+            </a>
+         </li>);
+            })
+        }
+     </ul>);
   };
   export default NetflixSeries;// default export can only be 1 in a file
 

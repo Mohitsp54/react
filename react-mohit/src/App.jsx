@@ -19,10 +19,6 @@ export const App = ()=>{
   <React.Fragment>
   <Header/>
   <NetflixSeries />
-  <NetflixSeries />
-  <NetflixSeries />
-  <NetflixSeries />
-  <NetflixSeries />
   <Footer/>
   </React.Fragment>)
 };
