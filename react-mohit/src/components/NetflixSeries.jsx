@@ -3,7 +3,7 @@ import { SeriesCard } from "./SeriesCard";
 
 const NetflixSeries = () =>{
   return (
-   <ul> 
+   <ul className ="grid grid-three--cols"> 
     {seriesData.map((curElem)=>(
       <SeriesCard key={curElem.id} data={curElem}/>
    ))}
@@ -11,10 +11,10 @@ const NetflixSeries = () =>{
 };
   export default NetflixSeries;// default export can only be 1 in a file
 
-  export const Header = ()=>{
-    return <p>copyright @Netflix</p>;
-  }
+  // export const Header = ()=>{
+  //   return <p>copyright @Netflix</p>;
+  // }
 
-  export const Footer = ()=>{
-    return <p>copyright @Netflix</p>;
-  };
+  // export const Footer = ()=>{
+  //   return <p>copyright @Netflix</p>;
+  // };

@@ -1,7 +1,8 @@
 // import NetflixSeries from "./components/NetflixSeries";
 import React from 'react';
 import './App.css'
-import NetflixSeries,{ Footer,Header } from './components/NetflixSeries';
+import NetflixSeries from './components/NetflixSeries';
+import "./components/Netflix.css";
 
 // export const App = ()=>{
 //   return (
@@ -16,9 +17,8 @@ import NetflixSeries,{ Footer,Header } from './components/NetflixSeries';
 // or
 export const App = ()=>{
   return (
-  <React.Fragment>
-  <Header/>
+  <section className='container'>
+  <h1 className='card-heading'>List of Best Netflix Series</h1>
   <NetflixSeries />
-  <Footer/>
-  </React.Fragment>)
+  </section>)
 };
