@@ -1,19 +1,26 @@
 export const SeriesCard = ({data})=>{
-    const {id,img_url,name,rating,description,genre,cast,watch_url} = data;
+    const {img_url,name,rating,description,genre,cast,watch_url} = data;
+    const btn_style= {
+        padding:"1.2rem 2.4rem",
+        border:"none",
+        fontSize:"1.6rem"
+    }
     return (
-        <li>
+        <li className="card">
             <div>
             <img src={img_url} alt ={name}
             width="40%" height="40%"/>
             </div>
+            <div className="card-content">
             <h2>Name: {name}</h2>
             <h3>Rating:{rating}</h3>
-            <p>summary:{description}</p>
-            <p>Genre:{genre}</p>
-            <p>Cast:{cast}</p>
+            <p><b>summary:</b>{description}</p>
+            <p><b>Genre:</b>{genre}</p>
+            <p><b>Cast:</b>{cast}</p>
             <a href={watch_url} target="_blank">
-             <button>Watch Now</button>
+             <button style={btn_style}>Watch Now</button>
             </a>
+            </div>
          </li>
     );
 };
