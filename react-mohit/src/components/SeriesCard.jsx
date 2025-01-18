@@ -3,8 +3,10 @@ export const SeriesCard = ({data})=>{
     const btn_style= {
         padding:"1.2rem 2.4rem",
         border:"none",
-        fontSize:"1.6rem"
+        fontSize:"1.6rem",
+        borderRadius:"100px"
     }
+    const ratingClass = rating>=8.5?"super_hit":"average";
     return (
         <li className="card">
             <div>
@@ -13,7 +15,7 @@ export const SeriesCard = ({data})=>{
             </div>
             <div className="card-content">
             <h2>Name: {name}</h2>
-            <h3>Rating:{rating}</h3>
+            <h3>Rating:<span className={`rating ${ratingClass}`}>{rating}</span></h3>
             <p><b>summary:</b>{description}</p>
             <p><b>Genre:</b>{genre}</p>
             <p><b>Cast:</b>{cast}</p>

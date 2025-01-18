@@ -21,3 +21,15 @@ button{
 button:hover{
     cursor: pointer;
 }
+.super_hit{
+    background-color:rgb(112, 212, 11);
+}
+.average{
+    background-color: #f1c515;
+}
+.rating{
+    padding: 0.3rem 1.8rem;
+    color: #000;
+    border-radius: 100px;
+    margin-left: 1.2rem;
+}
